@@ -11,6 +11,7 @@ from task02 import check_fibonacci
         ([1, 1, 3, 4, 5], False),
         ([1, 1], True),
         ([0], False),
+        ([1, 1, 2, 3, 5, 8, 13], True),
     ],
 )
 def test_check_fibonacci(values: Sequence[int], expected_result: bool):
