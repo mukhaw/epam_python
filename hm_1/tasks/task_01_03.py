@@ -17,7 +17,7 @@ def find_maximum_and_minimum(file_name: str) -> Tuple[int, int]:
         if os.path.getsize(file_name) > 0:
             file = open(file_name, "r")
         else:
-            return "This file is empgitty"
+            return "This file is empty"
     except OSError:
         return "We have some OSError"
     data = list(file.readline().rstrip("\n").split(","))
