@@ -7,7 +7,7 @@ from hm_1.tasks.task_01_02 import check_fibonacci
 
 @pytest.mark.parametrize(
     "value",
-    [[0, 1, 1, 2], [0, 1, 1], [0, 1, 1, 2, 3, 5, 8], [0, 1, 1, 2, 3, 5, 8, 13]],
+    [[0, 1], [0, 1, 1, 2], [0, 1, 1], [0, 1, 1, 2, 3, 5, 8], [0, 1, 1, 2, 3, 5, 8, 13]],
 )
 def test_sequence_is_fibonacci(value: Sequence[int]):
     assert check_fibonacci(value) is True
