@@ -8,6 +8,7 @@ from hm_1.tasks.task_01_05 import find_maximal_subarray_sum
 @pytest.mark.parametrize(
     ("numbers", "k", "expected_result"),
     [
+        ([1], 0, 0),
         ([1, 2], 2, 3),
         ([1, 2], 1, 2),
         ([4, -1, -1], 3, 4),
