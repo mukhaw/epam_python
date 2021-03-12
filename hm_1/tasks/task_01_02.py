@@ -15,4 +15,4 @@ def check_fibonacci(data: Sequence[int]) -> bool:
         for i in range(len(data) - 2):
             if data[i + 2] != sum(data[i : i + 2]):
                 res = -1
-    return False if res == -1 else True
+    return res != -1
