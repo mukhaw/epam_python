@@ -8,11 +8,11 @@ from typing import Sequence
 
 
 def check_fibonacci(data: Sequence[int]) -> bool:
-    res = 0
+
     if len(data) <= 1 or (data[0:2] != [0, 1]):
-        res = -1
+        return False
     else:
         for i in range(len(data) - 2):
             if data[i + 2] != sum(data[i : i + 2]):
-                res = -1
-    return res != -1
+                return False
+    return True
