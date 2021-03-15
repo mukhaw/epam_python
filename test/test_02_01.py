@@ -96,7 +96,7 @@ def test_get_longest_diverse_words_works_right(
         (os.path.dirname(__file__) + "/example2.txt", "v"),
         (os.path.dirname(__file__) + "/example3.txt", ","),
         (os.path.dirname(__file__) + "/example4.txt", "-"),
-        (os.path.dirname(__file__) + "/example5.txt", "a"),
+        (os.path.dirname(__file__) + "/example5.txt", "\n"),
     ],
 )
 def test_get_rarest_char_works_right(file_name: str, expected_result: int):
