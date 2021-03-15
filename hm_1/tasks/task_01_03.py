@@ -15,6 +15,5 @@ def find_maximum_and_minimum(file_name: str) -> Tuple[int, int]:
     data = []
     with open(file_name) as fi:
         for line in fi:
-            data.append(int(line.rstrip("\n")))
-        data.sort()
-        return "This file is empty" if not data else (data[-1], data[0])
+            data.append(int(line))
+    return max(data), min(data)
