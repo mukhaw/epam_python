@@ -27,10 +27,13 @@ def get_longest_diverse_words(file_path: str) -> List[str]:
     )
     words = text_without_punctuation.split()
     for i in words:
-        data[i] = len(set(i))
-    for i in range(10):
-        result.append(sorted(data.items(), key=lambda x: x[1], reverse=True)[i][0])
-    return result
+        data[i] = len(set(i.lower()))
+    k = len(data) if len(data) <= 10 else 10
+    result = sorted(data.items(), key=lambda x: x[1], reverse=True)
+    list_10_longest_words = []
+    for i in sorted(result[0:k], key=lambda x: len(x[0]), reverse=True):
+        list_10_longest_words.append(i[0])
+    return list_10_longest_words
 
 
 def get_rarest_char(file_path: str) -> str:
@@ -39,7 +42,8 @@ def get_rarest_char(file_path: str) -> str:
     symbols = set(text.lower())
     for i in symbols:
         data[i] = text.lower().count(i)
-    return sorted(data.items(), key=lambda k: (-k[1], k[0]))[0][0]
+    sorted_data_by_rarest = sorted(data.items(), key=lambda k: k[0])
+    return sorted(sorted_data_by_rarest, key=lambda k: k[1])[0][0]
 
 
 def count_punctuation_chars(file_path: str) -> int:
