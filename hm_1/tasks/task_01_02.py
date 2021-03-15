@@ -8,7 +8,8 @@ from typing import Sequence
 
 
 def check_fibonacci(data: Sequence[int]) -> bool:
-
+    if data == [0]:
+        return True
     if len(data) <= 1 or (data[0:2] != [0, 1]):
         return False
     else:
