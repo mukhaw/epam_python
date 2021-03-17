@@ -7,7 +7,7 @@ def detect_index(some_iterable_object, position):
     return some_iterable_object.index(position)
 
 
-def custom_range(some_iterable_object, start="", stop="", step=1):
+def custom_range(some_iterable_object, stop="", start="", step=1):
     if not some_iterable_object:
         return "Wrong values"
     start = 0 if start == "" else detect_index(some_iterable_object, start)
