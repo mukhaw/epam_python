@@ -7,11 +7,10 @@ Given a file containing text. Complete using only default collections:
     5) Find most common non ascii char for document
 """
 import string
-from collections import Counter
 from typing import List
 
 
-def get_data(file_path: str) -> str:
+def get_text(file_path: str) -> str:
     data = ""
     with open(file_path, encoding="unicode_escape") as f:
         for line in f:
@@ -22,7 +21,7 @@ def get_data(file_path: str) -> str:
 def get_longest_diverse_words(file_path: str) -> List[str]:
     data = {}
     result = []
-    text_without_punctuation = get_data(file_path).translate(
+    text_without_punctuation = get_text(file_path).translate(
         str.maketrans("", "", string.punctuation)
     )
     words = text_without_punctuation.split()
@@ -38,35 +37,28 @@ def get_longest_diverse_words(file_path: str) -> List[str]:
 
 def get_rarest_char(file_path: str) -> str:
     data = {}
-    text = get_data(file_path)
-    symbols = set(text.lower())
-    for i in symbols:
+    text = get_text(file_path)
+    for i in set(text.lower()):
         data[i] = text.lower().count(i)
-    sorted_data_by_rarest = sorted(data.items(), key=lambda k: k[0])
-    return sorted(sorted_data_by_rarest, key=lambda k: k[1])[0][0]
+    return min(data, key=data.get)
 
 
 def count_punctuation_chars(file_path: str) -> int:
-    text = get_data(file_path)
-    counts_punctuation_chars = []
-    for i in string.punctuation:
-        counts_punctuation_chars.append(text.count(i))
-    return sum(counts_punctuation_chars)
+    text = get_text(file_path)
+    text_without_punctuation = text.translate(str.maketrans("", "", string.punctuation))
+    return len(text) - len(text_without_punctuation)
 
 
 def count_non_ascii_chars(file_path: str) -> int:
-    text = get_data(file_path)
-    count = 0
-    for i in text.lower():
-        if ord(i) > 128:
-            count += 1
-    return count
+    text = get_text(file_path)
+    text_without_non_ascii_chars = text.encode("ascii", "ignore").decode()
+    return len(text) - len(text_without_non_ascii_chars)
 
 
 def get_most_common_non_ascii_char(file_path: str) -> str:
-    text = get_data(file_path)
-    non_ascii_symbols = []
+    text = get_text(file_path)
+    d = {}
     for i in text.lower():
-        if ord(i) > 128:
-            non_ascii_symbols.append(i)
-    return Counter(non_ascii_symbols).most_common(1)[0][0]
+        if not i.isascii():
+            d[i] = text.count(i)
+    return max(d, key=d.get)
