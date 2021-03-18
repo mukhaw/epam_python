@@ -89,39 +89,22 @@ def test_get_longest_diverse_words_return_longest_diverse_words(
     assert actual_result == expected_result
 
 
-def test_get_rarest_char_return_the_rarest_char_from_example_1():
-    actual_result = get_rarest_char(os.path.dirname(__file__) + "/example1.txt")
-    expected_result = ["z", "y", "—", "p"]
+@pytest.mark.parametrize(
+    ("file_name", "expected_result"),
+    [
+        (os.path.dirname(__file__) + "/example1.txt", "—"),
+        (os.path.dirname(__file__) + "/example2.txt", "v"),
+        (os.path.dirname(__file__) + "/example3.txt", "b"),
+        (os.path.dirname(__file__) + "/example4.txt", "-"),
+        (os.path.dirname(__file__) + "/example5.txt", "w"),
+    ],
+)
+def test_get_rarest_char_returns_the_rarest_char(
+    file_name: str, expected_result: List[str]
+):
+    actual_result = get_rarest_char(file_name)
 
-    assert actual_result in expected_result
-
-
-def test_get_rarest_char_return_the_rarest_char_from_example_2():
-    actual_result = get_rarest_char(os.path.dirname(__file__) + "/example2.txt")
-    expected_result = ["v"]
-
-    assert actual_result in expected_result
-
-
-def test_get_rarest_char_return_the_rarest_char_from_example_3():
-    actual_result = get_rarest_char(os.path.dirname(__file__) + "/example3.txt")
-    expected_result = ["m", "ö", "b", ","]
-
-    assert actual_result in expected_result
-
-
-def test_get_rarest_char_return_the_rarest_char_from_example_4():
-    actual_result = get_rarest_char(os.path.dirname(__file__) + "/example4.txt")
-    expected_result = ["k", "ü", "-", "p"]
-
-    assert actual_result in expected_result
-
-
-def test_get_rarest_char_return_the_rarest_char_from_example_5():
-    actual_result = get_rarest_char(os.path.dirname(__file__) + "/example5.txt")
-    expected_result = ["w", "n", "ä", "m", "\n", "a", "b"]
-
-    assert actual_result in expected_result
+    assert actual_result == expected_result
 
 
 @pytest.mark.parametrize(
