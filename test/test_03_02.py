@@ -10,7 +10,7 @@ def test_power_of_two_returns_true(value: int):
 
 @pytest.mark.parametrize(
     "value",
-    [10, 20],
+    [10],
 )
 def test_power_of_two_returns_false(value: int):
     assert parallel_load(value) is False
