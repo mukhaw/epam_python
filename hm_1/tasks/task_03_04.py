@@ -11,9 +11,15 @@ Write a function that detects if a number is Armstrong number in functionaly sty
  - do not use loops, preferably using list comprehensions
 ### Example function signature and call
 """
+from functools import partial
+
+
+def exponentiation(number: str, p):
+    return int(number) ** p
 
 
 def is_armstrong(number: int) -> bool:
-    numbers = [int(i) for i in str(number)]
-    sum_of_digits = sum((number ** len(numbers) for number in numbers))
+    sum_of_digits = sum(
+        list(map(partial(exponentiation, p=len(str(number))), list(str(number))))
+    )
     return number == sum_of_digits and number != 0
