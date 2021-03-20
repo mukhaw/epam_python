@@ -7,15 +7,35 @@ def detect_index(some_iterable_object, position):
     return some_iterable_object.index(position)
 
 
-def custom_range(some_iterable_object, stop="", start="", step=1):
+def detect_stop_start_step(some_iterable_object, args):
+    if not args:
+        start, stop, step = 0, len(some_iterable_object), 1
+        return start, stop, step
+    elif len(args) == 1:
+        start, stop, step = 0, detect_index(some_iterable_object, args[0]), 1
+        return start, stop, step
+    elif len(args) == 2:
+        start, stop, step = (
+            detect_index(some_iterable_object, args[0]),
+            detect_index(some_iterable_object, args[1]),
+            1,
+        )
+        return start, stop, step
+    elif len(args) == 3:
+        start, stop, step = (
+            detect_index(some_iterable_object, args[0]),
+            detect_index(some_iterable_object, args[1]),
+            args[2],
+        )
+        return start, stop, step
+    else:
+        return "Wrong values"
+
+
+def custom_range(some_iterable_object, *args):
     if not some_iterable_object:
         return "Wrong values"
-    start = 0 if start == "" else detect_index(some_iterable_object, start)
-    stop = (
-        len(some_iterable_object)
-        if stop == ""
-        else detect_index(some_iterable_object, stop)
-    )
+    start, stop, step = detect_stop_start_step(some_iterable_object, args)
     if isinstance(some_iterable_object, list) or isinstance(
         some_iterable_object, tuple
     ):

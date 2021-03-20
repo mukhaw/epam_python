@@ -18,19 +18,19 @@ def test_custom_range_list_with_start_stop_returns_part_of_list():
 
 
 def test_custom_range_list_with_start_returns_part_of_list_start_to_end():
-    actual_result = custom_range([6, 2, 3, 4, 5], 6)
-    expected_result = [6, 2, 3, 4, 5]
+    actual_result = custom_range([6, 2, 3, 4, 5], 5)
+    expected_result = [6, 2, 3, 4]
     assert actual_result == expected_result
 
 
 def test_custom_range_list_with_stop_returns_part_of_list_0_to_stop():
-    actual_result = custom_range([6, 2, 3, 4, 5], stop=5)
+    actual_result = custom_range([6, 2, 3, 4, 5], 5)
     expected_result = [6, 2, 3, 4]
     assert actual_result == expected_result
 
 
 def test_custom_range_empty_list():
-    actual_result = custom_range([], stop=5)
+    actual_result = custom_range([], 5)
     expected_result = "Wrong values"
     assert actual_result == expected_result
 
@@ -50,19 +50,19 @@ def test_custom_range_tuple_with_start_stop_returns_part_of_tuple():
 
 
 def test_custom_range_tuple_with_start_returns_part_of_tuple_start_to_end():
-    actual_result = custom_range((6, 2, 3, 4, 5), 6)
-    expected_result = (6, 2, 3, 4, 5)
+    actual_result = custom_range((6, 2, 3, 4, 5), 5)
+    expected_result = (6, 2, 3, 4)
     assert actual_result == expected_result
 
 
 def test_custom_range_tuple_with_stop_returns_part_of_tuple_0_to_stop():
-    actual_result = custom_range((6, 2, 3, 4, 5), stop=5)
+    actual_result = custom_range((6, 2, 3, 4, 5), 5)
     expected_result = (6, 2, 3, 4)
     assert actual_result == expected_result
 
 
 def test_custom_range_empty_tuple():
-    actual_result = custom_range((), stop=5)
+    actual_result = custom_range((), 5)
     expected_result = "Wrong values"
     assert actual_result == expected_result
 
@@ -80,7 +80,7 @@ def test_custom_range_string_with_start_stop_returns_part_of_string():
 
 
 def test_custom_range_string_with_stop_returns_part_of_string_0_to_stop():
-    actual_result = custom_range(string.ascii_lowercase, stop="g")
+    actual_result = custom_range(string.ascii_lowercase, "g")
     expected_result = ["a", "b", "c", "d", "e", "f"]
     assert actual_result == expected_result
 
@@ -138,7 +138,7 @@ def test_custom_range_dict_with_stop_returns_part_of_dict_0_to_stop():
             "f": 0,
             "b": 2,
         },
-        stop="d",
+        "d",
     )
     expected_result = [
         ("a", 1),
@@ -202,7 +202,7 @@ def test_custom_range_dict_with_stop_value_returns_part_of_dict_0_to_stop():
             "f": 0,
             "b": 2,
         },
-        stop=8,
+        8,
     )
     expected_result = [
         ("a", 1),
