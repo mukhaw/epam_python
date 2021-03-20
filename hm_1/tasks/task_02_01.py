@@ -21,14 +21,13 @@ def get_text(file_path: str) -> str:
 
 def get_longest_diverse_words(file_path: str) -> List[str]:
     data = {}
-    result = []
     text_without_punctuation = get_text(file_path).translate(
         str.maketrans("", "", string.punctuation)
     )
     words = text_without_punctuation.split()
     for i in words:
         data[i] = len(set(i.lower()))
-    k = len(data) if len(data) <= 10 else 10
+    k = len(data) if len(data) < 10 else 10
     result = sorted(data.items(), key=lambda x: x[1], reverse=True)
     list_10_longest_words = []
     for i in sorted(result[0:k], key=lambda x: len(x[0]), reverse=True):
