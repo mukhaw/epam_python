@@ -14,12 +14,11 @@ Write a function that detects if a number is Armstrong number in functionaly sty
 from functools import partial
 
 
-def exponentiation(number: str, p):
+def power(number: str, p):
     return int(number) ** p
 
 
 def is_armstrong(number: int) -> bool:
-    sum_of_digits = sum(
-        list(map(partial(exponentiation, p=len(str(number))), list(str(number))))
-    )
+    digits_in_power = partial(power, p=len(str(number)))
+    sum_of_digits = sum(map(digits_in_power, str(number)))
     return number == sum_of_digits and number != 0
