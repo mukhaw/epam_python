@@ -21,20 +21,16 @@ def f():
 ? 2
 '2'
 """
-from unittest.mock import Mock
+from typing import Callable
 
 
-def cache():
+def cache(func: Callable, times=1) -> Callable:
     caching = {}
 
     def cache_func(*args):
         if args in caching:
             return caching[args]
-        mock.metod.return_value = (args[0] ** args[1]) ** 2
-        caching[args] = mock.method()
+        caching[args] = func(args), times
         return caching[args]
 
     return cache_func
-
-
-mock = Mock()
