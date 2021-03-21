@@ -11,7 +11,6 @@ val_2 = cache_func(*some)
 assert val_1 is val_2
 """
 from typing import Callable
-from unittest.mock import Mock
 
 
 def cache(func: Callable) -> Callable:
@@ -20,11 +19,7 @@ def cache(func: Callable) -> Callable:
     def cache_func(*args):
         if args in caching:
             return caching[args]
-        mock.metod.return_value = (args[0] ** args[1]) ** 2
-        caching[args] = mock.method()
+        caching[args] = func(*args)
         return caching[args]
 
     return cache_func
-
-
-mock = Mock()
