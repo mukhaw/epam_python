@@ -13,13 +13,16 @@ assert val_1 is val_2
 from typing import Callable
 
 
+def func(a, b):
+    return (a ** b) ** 2
+
+
 def cache(func: Callable) -> Callable:
     caching = {}
 
     def cache_func(*args):
-        if args in caching:
-            return caching[args]
-        caching[args] = func(*args)
+        if args not in caching:
+            caching[args] = func(*args)
         return caching[args]
 
     return cache_func
