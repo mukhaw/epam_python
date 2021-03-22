@@ -9,25 +9,25 @@ def detect_index(some_iterable_object, position):
 
 def detect_stop_start_step(some_iterable_object, args):
     if not args:
-        start, stop, step = 0, len(some_iterable_object), 1
-        return start, stop, step
+        args = 0, len(some_iterable_object), 1
+        return args
     elif len(args) == 1:
-        start, stop, step = 0, detect_index(some_iterable_object, args[0]), 1
-        return start, stop, step
+        args = 0, detect_index(some_iterable_object, args[0]), 1
+        return args
     elif len(args) == 2:
-        start, stop, step = (
+        args = (
             detect_index(some_iterable_object, args[0]),
             detect_index(some_iterable_object, args[1]),
             1,
         )
-        return start, stop, step
+        return args
     elif len(args) == 3:
-        start, stop, step = (
+        args = (
             detect_index(some_iterable_object, args[0]),
             detect_index(some_iterable_object, args[1]),
             args[2],
         )
-        return start, stop, step
+        return args
     else:
         return "Wrong values"
 

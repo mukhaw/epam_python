@@ -211,3 +211,9 @@ def test_custom_range_dict_with_stop_value_returns_part_of_dict_0_to_stop():
         ("c", 5),
     ]
     assert actual_result == expected_result
+
+
+def test_custom_range_list_with_empty_string_stop_returns_part_of_string_0_to_stop():
+    actual_result = custom_range([1, 2, 3, 4, "", 5, 6, 7], "")
+    expected_result = [1, 2, 3, 4]
+    assert actual_result == expected_result
