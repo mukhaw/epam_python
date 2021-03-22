@@ -16,5 +16,6 @@ from typing import List, Tuple
 
 
 def major_and_minor_elem(inp: List) -> Tuple[int, int]:
-    inp = Counter(inp).most_common()
-    return inp[0][0], inp[len(inp) - 1][0]
+    minor_elem, _ = min(Counter(inp).items(), key=lambda x: x[1])
+    major_elem, _ = max(Counter(inp).items(), key=lambda x: x[1])
+    return major_elem, minor_elem
