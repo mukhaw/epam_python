@@ -13,10 +13,6 @@ assert val_1 is val_2
 from typing import Callable
 
 
-def func(a, b):
-    return (a ** b) ** 2
-
-
 def cache(func: Callable) -> Callable:
     caching = {}
 
