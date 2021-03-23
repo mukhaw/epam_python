@@ -14,11 +14,11 @@ from typing import Callable
 
 
 def cache(func: Callable) -> Callable:
-    caching = {}
+    cache_data = {}
 
     def cache_func(*args):
-        if args not in caching:
-            caching[args] = func(*args)
-        return caching[args]
+        if args not in cache_data:
+            cache_data[args] = func(*args)
+        return cache_data[args]
 
     return cache_func
