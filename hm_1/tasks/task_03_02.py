@@ -29,9 +29,6 @@ def slow_calculate(value):
     return sum(struct.unpack("<" + "B" * len(data), data))
 
 
-def parallel_load(flow: int) -> float:
-    start = time.time()
+def parallel_load(flow: int):
     with Pool(flow) as p:
         p.map(slow_calculate, range(0, 500))
-    end = time.time()
-    return end - start <= 60.0
