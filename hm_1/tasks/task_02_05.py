@@ -20,12 +20,12 @@ def detect_stop_start_step(some_iterable_object, args):
             args[2],
         )
     else:
-        return "Wrong values"
+        return "You're wrong"
 
 
 def custom_range(some_iterable_object, *args):
     if not some_iterable_object:
-        return "Wrong values"
+        return "You're wrong"
     start, stop, step = detect_stop_start_step(some_iterable_object, args)
     if isinstance(some_iterable_object, list) or isinstance(
         some_iterable_object, tuple

@@ -31,7 +31,7 @@ def test_custom_range_list_with_stop_returns_part_of_list_0_to_stop():
 
 def test_custom_range_empty_list():
     actual_result = custom_range([], 5)
-    expected_result = "Wrong values"
+    expected_result = "You're wrong"
     assert actual_result == expected_result
 
 
@@ -63,7 +63,7 @@ def test_custom_range_tuple_with_stop_returns_part_of_tuple_0_to_stop():
 
 def test_custom_range_empty_tuple():
     actual_result = custom_range((), 5)
-    expected_result = "Wrong values"
+    expected_result = "You're wrong"
     assert actual_result == expected_result
 
 
