@@ -31,4 +31,4 @@ def slow_calculate(value):
 
 def parallel_load(flow: int):
     with Pool(flow) as p:
-        p.map(slow_calculate, range(0, 500))
+        sum(p.map(slow_calculate, range(0, 500)))
