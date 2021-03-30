@@ -21,16 +21,55 @@ def f():
 ? 2
 '2'
 """
+"""
 from typing import Callable
+def func(a):
+    print('Function set up')
+    return a+1
+def cache(times = 1) -> Callable:
+    caching = {}
+    def cache_func(*args):
+        time = 0
+        print(args)
+        if args not in caching:
+            time += 1
+            caching[args] = func(*args),time
+        return caching[args]
+    print(caching)
+    return cache_func
+a,b = 100,200
+@cache(times = 3)
+def func(a,b):
+    print('Function set up')
+    return a+b
+func(a,b)
+"""
 
 
-def cache(func: Callable, times=1) -> Callable:
+def func(a, b):
+    return a + b
+
+
+def decorator(func, *args, **kwargs):
     caching = {}
 
-    def cache_func(*args):
-        if args in caching:
-            return caching[args]
-        caching[args] = func(args), times
-        return caching[args]
+    def inner(function):
+        time = 0
+        times = kwargs["times"] * kwargs["times"]
+        function = func(*args)
+        if args not in caching:
+            caching[args] = function
+        while time != times:
+            func(*args)
+            time += 1
 
-    return cache_func
+    return inner
+
+
+some = 1, 2
+count = 0
+
+
+@decorator(func, *some, times=3)
+def my_func():
+    ...
