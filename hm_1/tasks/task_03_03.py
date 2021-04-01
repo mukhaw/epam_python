@@ -40,4 +40,5 @@ sample_data = [
     },
     {"is_dead": True, "kind": "parrot", "type": "bird", "name": "polly"},
     {"is_dead": False, "kind": "swallow", "type": "bird", "name": "polly"},
+    {"is_dead": True, "kind": "fish", "type": "fish", "name": "molly"},
 ]

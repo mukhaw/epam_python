@@ -23,7 +23,7 @@ def test_filter_apply_with_faulty_cases_returns_message_about_it():
 
 
 def test_filter_apply_with_empty_case_returns_data_for_confition():
-    assert Filter().apply(range(-5, 0)) == [-5, -4, -3, -2, -1]
+    assert Filter().apply(range(0, 5)) == [0, 1, 2, 3, 4]
 
 
 def test_make_filter_returns_data_with_name_and_type_parameters():
