@@ -4,4 +4,4 @@ def read_magic_number(path: str) -> bool:
             number = int(file.read().rstrip("\n"))
             return number >= 1 and number < 3
     except Exception:
-        raise ValueError
+        raise ValueError("This is ValueError mistake")
