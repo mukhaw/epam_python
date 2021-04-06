@@ -19,10 +19,6 @@ You will learn:
  - how to write doctests
  - how to run doctests
  - how to write instructions
->>> fizzbuzz(5)
-["1", "2", "fizz", "4", "buzz"]
-* https://en.wikipedia.org/wiki/Fizz_buzz
-** Энциклопедия профессора Фортрана page 14, 15, "Робот Фортран, чисть картошку!"
 """
 from typing import List
 
