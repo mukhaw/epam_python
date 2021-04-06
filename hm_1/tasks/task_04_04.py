@@ -13,7 +13,4 @@ def fizz_bass_element(number: int):
 
 
 def fizzbuzz(n: int) -> List[str]:
-    res = []
-    for i in range(1, n + 1):
-        res.append(fizz_bass_element(i))
-    return res
+    return [fizz_bass_element(i) for i in range(1, n + 1)]
