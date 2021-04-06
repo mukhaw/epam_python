@@ -1,6 +1,6 @@
 import pytest
 
-from hm_1.tasks.task_03_03 import Filter, make_filter, sample_data
+from hm_1.tasks.task_03_03 import Filter, make_filter
 
 
 @pytest.mark.parametrize(
@@ -19,7 +19,7 @@ def test_filter_apply_returns_filtered_list(function, data, exepected_result):
 
 
 def test_filter_apply_with_faulty_cases_returns_message_about_it():
-    assert Filter(lambda a: a > 0).apply(range(-5, 0)) == "It is faulty case"
+    assert Filter(lambda a: a > 0).apply(range(-5, 0)) == []
 
 
 def test_filter_apply_with_empty_case_returns_data_for_confition():
@@ -36,6 +36,17 @@ def test_make_filter_returns_data_with_name_and_type_parameters():
 
 
 def test_make_filter_with_faulty_case_returns_message_about_it():
-    assert (
-        make_filter(name="polly", type="dog").apply(sample_data) == "It is faulty case"
-    )
+    assert make_filter(name="polly", type="dog").apply(sample_data) == []
+
+
+sample_data = [
+    {
+        "name": "Bill",
+        "last_name": "Gilbert",
+        "occupation": "was here",
+        "type": "person",
+    },
+    {"is_dead": True, "kind": "parrot", "type": "bird", "name": "polly"},
+    {"is_dead": False, "kind": "swallow", "type": "bird", "name": "polly"},
+    {"is_dead": True, "kind": "fish", "type": "fish", "name": "molly"},
+]
