@@ -33,6 +33,7 @@ PEP8 соблюдать строго.
 К названием остальных переменных, классов и тд. подходить ответственно -
 давать логичные подходящие имена.
 """
+from datetime import datetime
 
 
 class Homework:
@@ -42,7 +43,7 @@ class Homework:
         self.created = created
 
     def is_active(self) -> bool:
-        return self.created < self.dead_line
+        return datetime.now() < self.dead_line + self.created
 
 
 class Student:
@@ -51,7 +52,9 @@ class Student:
         self.first_name = first_name
 
     def do_homework(self, hw: Homework):
-        return "You're late" if not hw.is_active() else hw
+        if not hw.is_active():
+            return "You're late", None
+        return hw
 
 
 class Teacher:
