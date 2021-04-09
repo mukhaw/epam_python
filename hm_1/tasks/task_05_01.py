@@ -53,7 +53,8 @@ class Student:
 
     def do_homework(self, hw: Homework):
         if not hw.is_active():
-            return "You're late", None
+            print("You're late")
+            return None
         return hw
 
 
