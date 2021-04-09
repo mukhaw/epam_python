@@ -1,4 +1,4 @@
-from tempfile import NamedTemporaryFile
+from tempfile import NamedTemporaryFile, TemporaryDirectory
 
 import pytest
 
@@ -6,12 +6,12 @@ from hm_1.tasks.task_04_01 import read_magic_number
 
 
 def test_read_magic_number_returns_true():
-    f = NamedTemporaryFile(delete=True)
-    f.write(b"1\n")
-    f.seek(0)
-    actual_result = read_magic_number(f.name)
-    f.close()
-    assert actual_result is True
+    with TemporaryDirectory() as f:
+        f.write(b"1\n")
+        f.seek(0)
+        actual_result = read_magic_number(f.name)
+        f.cleanup()
+        assert actual_result is True
 
 
 def test_read_magic_number_returns_true_():
