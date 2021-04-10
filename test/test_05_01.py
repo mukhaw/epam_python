@@ -15,21 +15,21 @@ def test_class_homework_atributes_saved():
 
 
 def test_class_homework_method_is_active_returns_true():
-    hw = Homework(
+    homework = Homework(
         "Learn function",
         timedelta(days=5),
         datetime(2021, 4, 12, 15, 44, 35),
     )
-    assert hw.is_active() is True
+    assert homework.is_active() is True
 
 
 def test_class_homework_method_is_active_returns_false():
-    hw = Homework(
+    homework = Homework(
         "Learn function",
         timedelta(days=0),
         datetime(2019, 1, 14, 15, 44, 35),
     )
-    assert hw.is_active() is False
+    assert homework.is_active() is False
 
 
 def test_class_student_atributes_saved():
@@ -40,12 +40,12 @@ def test_class_student_atributes_saved():
 
 def test_class_student_method_do_homework_returns_homework():
     student = Student("Petrov", "Ivan")
-    hw = Homework(
+    homework = Homework(
         "Learn function",
         timedelta(days=3),
         datetime(2021, 4, 8, 15, 44, 35),
     )
-    assert student.do_homework(hw) == hw
+    assert student.do_homework(homework) == homework
 
 
 def test_class_student_method_do_homework_returns_message(capsys):
