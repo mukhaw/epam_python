@@ -1,5 +1,3 @@
-import io
-import sys
 from datetime import datetime, timedelta
 
 from hm_1.tasks.task_05_01 import Homework, Student, Teacher
@@ -17,21 +15,21 @@ def test_class_homework_atributes_saved():
 
 
 def test_class_homework_method_is_active_returns_true():
-    attributes = (
+    hw = Homework(
         "Learn function",
         timedelta(days=5),
         datetime(2021, 4, 12, 15, 44, 35),
     )
-    assert Homework(*attributes).is_active() is True
+    assert hw.is_active() is True
 
 
 def test_class_homework_method_is_active_returns_false():
-    attributes = (
+    hw = Homework(
         "Learn function",
         timedelta(days=0),
         datetime(2019, 1, 14, 15, 44, 35),
     )
-    assert Homework(*attributes).is_active() is False
+    assert hw.is_active() is False
 
 
 def test_class_student_atributes_saved():
@@ -41,54 +39,40 @@ def test_class_student_atributes_saved():
 
 
 def test_class_student_method_do_homework_returns_homework():
-    attributes_for_student = "Petrov", "Ivan"
-    attributes_for_homework = (
+    student = Student("Petrov", "Ivan")
+    hw = Homework(
         "Learn function",
         timedelta(days=3),
         datetime(2021, 4, 8, 15, 44, 35),
     )
-    test_student = Student(*attributes_for_student).do_homework(
-        Homework(*attributes_for_homework)
-    )
-    assert list(test_student.__dict__.values()) == list(
-        Homework(*attributes_for_homework).__dict__.values()
-    )
+    assert student.do_homework(hw) == hw
 
 
-def test_class_student_method_do_homework_returns_message():
-    attributes_for_student = "Petrov", "Ivan"
-    attributes_for_homework = (
+def test_class_student_method_do_homework_returns_message(capsys):
+    student = Student("Petrov", "Ivan")
+    homework = Homework(
         "Learn function",
         timedelta(days=5),
         datetime(2019, 1, 13, 15, 44, 35),
     )
-    captured_output = io.StringIO()  # Create StringIO object
-    sys.stdout = captured_output
-    test_student = Student(*attributes_for_student).do_homework(
-        Homework(*attributes_for_homework)
-    )
-    sys.stdout = sys.__stdout__
-    assert captured_output.getvalue().rstrip("\n") == "You're late"
-    assert test_student is None
+    doing_homework = student.do_homework(homework)
+    assert capsys.readouterr().out == "You're late\n"
+    assert doing_homework is None
 
 
 def test_class_teacher_atributes_saved():
-    attributes = "Petrova", "Ivanessa"
-    test_teacher = Teacher(*attributes)
-    assert test_teacher.last_name == "Petrova"
-    assert test_teacher.first_name == "Ivanessa"
+    teacher = Teacher("Petrova", "Ivanessa")
+    assert teacher.last_name == "Petrova"
+    assert teacher.first_name == "Ivanessa"
 
 
 def test_class_teacher_method_create_homework_returns_homework():
-    attributes_for_student = "Petrov", "Ivan"
-    attributes_for_homework = (
+    teacher = Teacher("Petrov", "Ivan")
+    attributes = (
         "Learn function",
         timedelta(days=9),
         datetime(2021, 4, 12, 15, 44, 35),
     )
-    test_student = Teacher(*attributes_for_student).create_homework(
-        *attributes_for_homework
-    )
-    assert list(test_student.__dict__.values()) == list(
-        Homework(*attributes_for_homework).__dict__.values()
+    assert list(teacher.create_homework(*attributes).__dict__.values()) == list(
+        attributes
     )
