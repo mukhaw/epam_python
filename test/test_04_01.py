@@ -42,4 +42,4 @@ def test_read_magic_number_with_empty_str_returns_false():
 
 def test_read_magic_number_returns_value_erorr():
     with pytest.raises(ValueError, match="This is ValueError mistake"):
-        read_magic_number("test.txt")
+        read_magic_number("not_exist.txt")
