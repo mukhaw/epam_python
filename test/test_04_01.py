@@ -1,4 +1,4 @@
-from tempfile import NamedTemporaryFile, TemporaryDirectory
+from tempfile import NamedTemporaryFile
 
 import pytest
 
@@ -6,48 +6,38 @@ from hm_1.tasks.task_04_01 import read_magic_number
 
 
 def test_read_magic_number_returns_true():
-    with TemporaryDirectory() as f:
-        f.write(b"1\n")
+    with NamedTemporaryFile(delete=True) as f:
+        f.write(b"1")
         f.seek(0)
-        actual_result = read_magic_number(f.name)
-        f.cleanup()
-        assert actual_result is True
+        assert read_magic_number(f.name) is True
 
 
 def test_read_magic_number_returns_true_():
-    f = NamedTemporaryFile(delete=True)
-    f.write(b"2\n")
-    f.seek(0)
-    actual_result = read_magic_number(f.name)
-    f.close()
-    assert actual_result is True
+    with NamedTemporaryFile(delete=True) as f:
+        f.write(b"2")
+        f.seek(0)
+        assert read_magic_number(f.name) is True
 
 
 def test_read_magic_number_with_wrong_number_returns_false():
-    f = NamedTemporaryFile(delete=True)
-    f.write(b"3")
-    f.seek(0)
-    actual_result = read_magic_number(f.name)
-    f.close()
-    assert actual_result is False
+    with NamedTemporaryFile(delete=True) as f:
+        f.write(b"3")
+        f.seek(0)
+        assert read_magic_number(f.name) is False
 
 
 def test_read_magic_number_with_str_returns_false():
-    f = NamedTemporaryFile(delete=True)
-    f.write(b"hkjh\n")
-    f.seek(0)
-    actual_result = read_magic_number(f.name)
-    f.close()
-    assert actual_result is False
+    with NamedTemporaryFile(delete=True) as f:
+        f.write(b"jkjhkh")
+        f.seek(0)
+        assert read_magic_number(f.name) is False
 
 
 def test_read_magic_number_with_empty_str_returns_false():
-    f = NamedTemporaryFile(delete=True)
-    f.write(b"")
-    f.seek(0)
-    actual_result = read_magic_number(f.name)
-    f.close()
-    assert actual_result is False
+    with NamedTemporaryFile(delete=True) as f:
+        f.write(b"")
+        f.seek(0)
+        assert read_magic_number(f.name) is False
 
 
 def test_read_magic_number_returns_value_erorr():
