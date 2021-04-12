@@ -43,7 +43,7 @@ def test_class_student_method_do_homework_returns_homework():
     homework = Homework(
         "Learn function",
         timedelta(days=3),
-        datetime(2021, 4, 8, 15, 44, 35),
+        datetime(2022, 4, 8, 15, 44, 35),
     )
     assert student.do_homework(homework) == homework
 
