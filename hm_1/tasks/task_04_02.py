@@ -24,9 +24,8 @@ import urllib.request
 def count_dots_on_i(url: str) -> int:
     try:
         with urllib.request.urlopen(url) as response:
-            html = response.read()
             count = 0
-            for i in str(html):
+            for i in str(response.read()):
                 if i == "i":
                     count += 1
         return count
