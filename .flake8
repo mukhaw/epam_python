@@ -17,5 +17,6 @@ per-file-ignores =
     # Skip unused imports in __init__ files
     __init__.py: F401
     hm_1/tasks/task_05_01.py: T001
+    hm_1/tasks/task_04_02.py: S310
 
 doctests = True
