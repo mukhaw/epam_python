@@ -46,30 +46,21 @@ func(a,b)
 """
 
 
-def func(a, b):
-    return a + b
+# Python code to illustrate
+# Decorators basic in Python
 
 
-def decorator(func, *args, **kwargs):
-    caching = {}
+def decorator_fun(func):
+    def inner(*args, **kwargs):
 
-    def inner(function):
-        time = 0
-        times = kwargs["times"] * kwargs["times"]
-        function = func(*args)
-        if args not in caching:
-            caching[args] = function
-        while time != times:
-            func(*args)
-            time += 1
+        func()
 
     return inner
 
 
-some = 1, 2
-count = 0
+@decorator_fun
+def func_to():
+    pass
 
 
-@decorator(func, *some, times=3)
-def my_func():
-    ...
+func_to()
