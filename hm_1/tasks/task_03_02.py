@@ -29,6 +29,6 @@ def slow_calculate(value):
     return sum(struct.unpack("<" + "B" * len(data), data))
 
 
-def parallel_load(flow: int):
-    with Pool(flow) as p:
+def parallel_load():
+    with Pool(700) as p:
         return sum(p.map(slow_calculate, range(0, 501)))
