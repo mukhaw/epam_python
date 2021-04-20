@@ -17,7 +17,7 @@ def test_class_homework_atributes_saved():
 def test_class_homework_method_is_active_returns_true():
     homework = Homework(
         "Learn function",
-        timedelta(days=5),
+        timedelta(days=365),
         datetime(2021, 4, 12, 15, 44, 35),
     )
     assert homework.is_active() is True
