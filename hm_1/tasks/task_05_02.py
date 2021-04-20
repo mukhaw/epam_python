@@ -32,12 +32,3 @@ def custom_sum(*args):
     custom_sum.__name__ = "custom_sum"
     custom_sum.__original_func = custom_sum
     return functools.reduce(lambda x, y: x + y, args)
-
-
-if __name__ == "__main__":
-    custom_sum([1, 2, 3], [4, 5])
-    custom_sum(1, 2, 3, 4)
-    print(custom_sum.__doc__)
-    print(custom_sum.__name__)
-    without_print = custom_sum.__original_func
-    print(custom_sum)
