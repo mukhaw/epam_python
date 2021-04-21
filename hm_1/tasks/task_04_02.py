@@ -28,6 +28,6 @@ def count_dots_on_i(url: str) -> int:
             for i in str(response.read()):
                 if i == "i":
                     count += 1
-        return count
+            return count
     except Exception:
         raise ValueError(f"Unreachable {url}")
