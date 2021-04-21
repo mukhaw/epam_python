@@ -1,20 +1,14 @@
-from unittest.mock import Mock
+from unittest.mock import patch
 
 import pytest
 
 from hm_1.tasks.task_04_02 import count_dots_on_i
 
 
-@pytest.mark.parametrize(
-    ("url", "expected_result"),
-    [
-        ("https://example.com/", 59),
-        ("https://docs.python.org/3/howto/urllib2.html", 2052),
-    ],
-)
-def test_count_dots_on_i(url: str, expected_result: int):
-    mock = Mock(side_effect=count_dots_on_i)
-    assert mock(url) == expected_result
+def test_count_dots_on_i():
+    with patch("requests.get") as fake:
+        fake.return_value = 59
+        assert count_dots_on_i("https://example.com/") == fake.return_value
 
 
 def test_count_dots_on_i_return_value_error():
