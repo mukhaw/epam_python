@@ -19,16 +19,17 @@ import functools
 def print_result(func):
     def wrapper(*args, **kwargs):
         """Function-wrapper which print result of an original function"""
-        result = func(*args, **kwargs)
+        result = func(args, **kwargs)
         print(result)
         return result
 
+    wrapper.__doc__ = "{} is new for the function {}".format(
+        str(func.__doc__), func.__name__
+    )
     return wrapper
 
 
 @print_result
 def custom_sum(*args):
-    custom_sum.__doc__ = """This function can sum any objects which have __add___"""
-    custom_sum.__name__ = "custom_sum"
-    custom_sum.__original_func = custom_sum
+    """This function can sum any objects which have __add___"""
     return functools.reduce(lambda x, y: x + y, args)
