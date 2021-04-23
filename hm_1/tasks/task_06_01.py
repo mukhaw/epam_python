@@ -7,16 +7,17 @@ reset_instances_counter - сбросить счетчик экземпляров
 Имя декоратора и методов не менять
 Ниже пример использования
 """
-from itertools import count
 
 
 def get_created_instances(cls):
-    return next(cls._ids) if cls else 0
+    return cls._counter if cls else 0
 
 
 def reset_instances_counter(cls):
-    cls._ids = count(0)
-    return get_created_instances(cls) - 1
+    try:
+        return get_created_instances(cls)
+    finally:
+        cls._counter = 0
 
 
 def instances_counter(cls):
@@ -28,7 +29,8 @@ def instances_counter(cls):
 
 @instances_counter
 class User(object):
-    _ids = count(0)
+    _counter = 0
 
     def __init__(self):
-        self.id = next(self._ids)
+        self.id = User._counter
+        User._counter += 1
