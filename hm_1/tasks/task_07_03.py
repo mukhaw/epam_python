@@ -21,7 +21,7 @@ import numpy as np
 def tic_tac_toe_checker(board) -> str:
     diagonals = [np.fliplr(board).diagonal(), board.diagonal(), ["-", "-", "-"]]
     for i, j, k in zip(board, board.transpose(), diagonals):
-        if ("".join(i) or "".join(j) or "".join(k)) == "xxx":
+        if "".join(i) == "xxx" or "".join(j) == "xxx" or "".join(k) == "xxx":
             return "x wins"
         if "".join(i) == "ooo" or "".join(j) == "ooo" or "".join(k) == "ooo":
             return "o wins"

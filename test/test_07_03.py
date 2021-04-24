@@ -11,3 +11,8 @@ def test_tic_tac_toe_returns_unfinished():
 def test_tic_tac_toe_returns_o_wins():
     board = np.array([["-", "-", "o"], ["-", "o", "o"], ["-", "x", "o"]])
     assert tic_tac_toe_checker(board) == "o wins"
+
+
+def test_tic_tac_toe_returns_x_wins():
+    board = np.array([["x", "-", "o"], ["-", "x", "o"], ["-", "x", "x"]])
+    assert tic_tac_toe_checker(board) == "x wins"
