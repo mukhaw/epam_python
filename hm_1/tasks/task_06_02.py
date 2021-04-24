@@ -15,12 +15,6 @@ HomeworkResult принимает объект автора задания, пр
     author - хранит объект Student
     created - c точной датой и временем создания
 
-
-    Вопросы:
-    1)Это должна быть функция или класс
-    2)если это функция анутри do_homework то нужен ли нам автор, логично
-    3) она должна быть отдельной
-    4)
 2. Если задание уже просрочено хотелось бы видеть исключение при do_homework,
 а не просто принт 'You are late'.
 Поднимайте исключение DeadlineError с сообщением 'You are late' вместо print.
@@ -68,22 +62,31 @@ class Homework:
 
 
 class Student(Person):
-    def do_homework(self, hw: Homework):
+    def do_homework(self, hw: Homework, message):
         try:
-            return hw
+            return HomeworkResult(hw, message, self)
         except Exception:
             raise Exception('DeadlineError:"You are late"')
 
 
+class HomeworkResult:
+    def __init__(self, homework, solution, author: Student):
+        self.homrwork = homework
+        self.solution = solution
+        self.author = author
+        self.created = homework.created
+
+
 class Teacher(Person):
+    homework_done = {}
+
     @staticmethod
     def create_homework(text, dead_line, created) -> Homework:
         return Homework(text, dead_line, created)
 
-
-class HomeworkResult:
-    def __init__(self, homework, solution, author, created):
-        self.homrwork = homework
-        self.solution = solution
-        self.author = author
-        self.created = created
+    def check_homework(self, hw_result: HomeworkResult):
+        if (
+            len(hw_result.solution) > 5
+        ) and hw_result.homrwork not in self.homework_done:
+            self.homework_done[hw_result.homrwork] = hw_result
+        return len(hw_result.solution) > 5
