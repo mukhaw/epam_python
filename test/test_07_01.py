@@ -24,3 +24,4 @@ def test_find_occurances_returns_number_of_occurances():
 
 def test_find_occurances_returns_0():
     assert find_occurrences(example_tree, "REG") == 0
+    assert find_occurrences({"1": "2"}, 1) == 0
