@@ -15,12 +15,26 @@ Example:
      [x, x, x]]
      Return value should be "x wins!"
 """
-import numpy as np
+
+
+def transponse(board):
+    transponse_list = []
+    for i in range(len(board)):
+        transponse_list.append([row[i] for row in board])
+    return transponse_list
+
+
+def diagonals(board):
+    n = list(range(len(board)))
+    return [
+        [board[i][i] for i in range(len(board))],
+        [board[i][j] for i, j in zip(n, reversed(n))],
+        ["-", "-", "-"],
+    ]
 
 
 def tic_tac_toe_checker(board) -> str:
-    diagonals = [np.fliplr(board).diagonal(), board.diagonal(), ["-", "-", "-"]]
-    for i, j, k in zip(board, board.transpose(), diagonals):
+    for i, j, k in zip(board, transponse(board), diagonals(board)):
         if "".join(i) == "xxx" or "".join(j) == "xxx" or "".join(k) == "xxx":
             return "x wins"
         if "".join(i) == "ooo" or "".join(j) == "ooo" or "".join(k) == "ooo":
