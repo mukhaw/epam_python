@@ -18,10 +18,8 @@ Example:
 
 
 def transponse(board):
-    transponse_list = []
     for i in range(len(board)):
-        transponse_list.append([row[i] for row in board])
-    return transponse_list
+        yield [row[i] for row in board]
 
 
 def diagonals(board):
@@ -29,14 +27,31 @@ def diagonals(board):
     return [
         [board[i][i] for i in range(len(board))],
         [board[i][j] for i, j in zip(n, reversed(n))],
-        ["-", "-", "-"],
     ]
 
 
+def winner(row):
+    row = "".join(row)
+    if row == "xxx":
+        return "x wins"
+    if row == "ooo":
+        return "o wins"
+    return ""
+
+
 def tic_tac_toe_checker(board) -> str:
-    for i, j, k in zip(board, transponse(board), diagonals(board)):
-        if "".join(i) == "xxx" or "".join(j) == "xxx" or "".join(k) == "xxx":
-            return "x wins"
-        if "".join(i) == "ooo" or "".join(j) == "ooo" or "".join(k) == "ooo":
-            return "o wins"
-    return "unfinished"
+    res = ""
+    for i in board:
+        res += winner(i)
+    for i in list(transponse(board)):
+        if winner(i) not in res:
+            res += winner(i)
+    for i in diagonals(board):
+        if winner(i) not in res:
+            res += winner(i)
+    if len(res) > 6:
+        return "draw"
+    elif not res:
+        return "unfinished"
+    else:
+        return res
