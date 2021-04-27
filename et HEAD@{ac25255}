@@ -1,0 +1,245 @@
+[33m6f1b5a3[m[33m ([m[1;36mHEAD -> [m[1;32mhw_02_03[m[33m)[m HEAD@{0}: checkout: moving from hw_02_03 to hw_02_03
+[33m6f1b5a3[m[33m ([m[1;36mHEAD -> [m[1;32mhw_02_03[m[33m)[m HEAD@{1}: checkout: moving from hw_02_04 to hw_02_03
+[33m656b4c7[m[33m ([m[1;31morigin/hw_02_04[m[33m, [m[1;32mhw_02_04[m[33m)[m HEAD@{2}: commit: Fix homework 02 task 04 and test 04
+[33m9a496db[m HEAD@{3}: checkout: moving from master to hw_02_04
+[33m3b461e0[m[33m ([m[1;31morigin/master[m[33m, [m[1;32mmaster[m[33m)[m HEAD@{4}: checkout: moving from master to master
+[33m3b461e0[m[33m ([m[1;31morigin/master[m[33m, [m[1;32mmaster[m[33m)[m HEAD@{5}: commit (merge): Resolve conflict
+[33m07afec1[m HEAD@{6}: reset: moving to master
+[33m07afec1[m HEAD@{7}: merge hw_02_04: Merge made by the 'recursive' strategy.
+[33ma0bcaf0[m HEAD@{8}: checkout: moving from hw_02_04 to master
+[33m9a496db[m HEAD@{9}: commit: Fix homework 02 task 04 and test 04
+[33m1a7896f[m HEAD@{10}: checkout: moving from hw_02_05 to hw_02_04
+[33m38d23a9[m[33m ([m[1;32mhw_02_05[m[33m)[m HEAD@{11}: commit: Fix homework 02 task 05 and test 05
+[33mac25255[m HEAD@{12}: commit: Fix homework 02 task 05 and test 05
+[33mba95d76[m HEAD@{13}: checkout: moving from hw_02_01 to hw_02_05
+[33m1c40aa1[m[33m ([m[1;31morigin/hw_02_01[m[33m, [m[1;32mhw_02_01[m[33m)[m HEAD@{14}: commit: Fix homework 02 task 01 and test 01
+[33m1c2bbcf[m HEAD@{15}: commit: Fix homework 02 task 01 and test 01
+[33mb1b58a8[m HEAD@{16}: checkout: moving from hw_02_02 to hw_02_01
+[33mdb76cca[m[33m ([m[1;32mhw_02_02[m[33m)[m HEAD@{17}: checkout: moving from hw_02_02 to hw_02_02
+[33mdb76cca[m[33m ([m[1;32mhw_02_02[m[33m)[m HEAD@{18}: commit (merge): Merge remote-tracking branch 'origin/hw_02_02' into hw_02_02
+[33m58ec6a0[m HEAD@{19}: commit: Fix homework 02 task 02 and test 02
+[33m51703db[m HEAD@{20}: checkout: moving from hw_02_01 to hw_02_02
+[33mb1b58a8[m HEAD@{21}: checkout: moving from hw_02_02 to hw_02_01
+[33m51703db[m HEAD@{22}: checkout: moving from hw_02_04 to hw_02_02
+[33m1a7896f[m HEAD@{23}: commit: Fix homework 02 task 04
+[33md299f71[m HEAD@{24}: commit: Fix homework 02 task 04 and test 04
+[33m311ede2[m HEAD@{25}: checkout: moving from hw_03_01 to hw_02_04
+[33m70329e2[m[33m ([m[1;32mhw_03_01[m[33m)[m HEAD@{26}: commit: Fix homework 03 task 01
+[33m82da184[m HEAD@{27}: checkout: moving from hw_03_04 to hw_03_01
+[33med1fbf2[m[33m ([m[1;32mhw_03_04[m[33m)[m HEAD@{28}: commit: Fix homework 03 task 04
+[33mb31f4cb[m HEAD@{29}: checkout: moving from hw_03_01 to hw_03_04
+[33m82da184[m HEAD@{30}: commit: Add homework 03 task 01 and test 01
+[33m311ede2[m HEAD@{31}: checkout: moving from hw_02_04 to hw_03_01
+[33m311ede2[m HEAD@{32}: commit: Fix homework 02 task 04 and test 04
+[33m570c37b[m HEAD@{33}: checkout: moving from hw03_02 to hw_02_04
+[33m7c00914[m[33m ([m[1;31morigin/hw03_02[m[33m, [m[1;32mhw03_02[m[33m)[m HEAD@{34}: commit: Fix homework 03 task 02 and test 02
+[33m1c12fb7[m HEAD@{35}: commit: Fix homework 03 task 02 and test 02
+[33m6652829[m HEAD@{36}: commit: Fix homework 03 task 02 and test 02
+[33ma0bcaf0[m HEAD@{37}: reset: moving to master
+[33m822d848[m[33m ([m[1;31morigin/hw_03_02[m[33m, [m[1;32mhw_03_02[m[33m)[m HEAD@{38}: checkout: moving from hw_03_02 to hw03_02
+[33m822d848[m[33m ([m[1;31morigin/hw_03_02[m[33m, [m[1;32mhw_03_02[m[33m)[m HEAD@{39}: merge origin/hw_03_02: Merge made by the 'recursive' strategy.
+[33m9443f78[m HEAD@{40}: commit: Fix homework 03 task 02 and test 02
+[33m2ab27f0[m HEAD@{41}: commit: Fix homework 03 task 02 and test 02
+[33ma0bcaf0[m HEAD@{42}: reset: moving to master
+[33m5d0256b[m HEAD@{43}: checkout: moving from hw_02_05 to hw_03_02
+[33mba95d76[m HEAD@{44}: commit: Fix homework 02 task 05 and test 05
+[33ma1df352[m HEAD@{45}: checkout: moving from hw_03_02 to hw_02_05
+[33m5d0256b[m HEAD@{46}: commit: Delete unsuable files
+[33m7a02152[m HEAD@{47}: checkout: moving from hw_03_04 to hw_03_02
+[33mb31f4cb[m HEAD@{48}: commit: Fix Homework 03 test 04
+[33m32b0bf5[m HEAD@{49}: commit: Fix Homework 03 task 04
+[33mf385d32[m HEAD@{50}: checkout: moving from hw_02_01 to hw_03_04
+[33mb1b58a8[m HEAD@{51}: commit: Fix homework 02 task 01
+[33me666110[m HEAD@{52}: checkout: moving from hw_03_04 to hw_02_01
+[33mf385d32[m HEAD@{53}: commit: Add homework 03 task 04 and test 04
+[33ma0bcaf0[m HEAD@{54}: reset: moving to master
+[33m7a02152[m HEAD@{55}: checkout: moving from hw_03_02 to hw_03_04
+[33m7a02152[m HEAD@{56}: commit: Add homework 03 task 02 and test 02
+[33md5fa473[m HEAD@{57}: commit: Add homework 03 task 02 and test 02
+[33ma1df352[m HEAD@{58}: checkout: moving from hw_02_05 to hw_03_02
+[33ma1df352[m HEAD@{59}: checkout: moving from hw_02_01 to hw_02_05
+[33me666110[m HEAD@{60}: commit: Fix the rarest char in homework 02 task 01 and test
+[33m5cdbbe5[m HEAD@{61}: checkout: moving from hw_02_04 to hw_02_01
+[33m570c37b[m HEAD@{62}: commit: Add homework 02 task 04 and test
+[33ma1df352[m HEAD@{63}: checkout: moving from hw_02_05 to hw_02_04
+[33ma1df352[m HEAD@{64}: commit: Fix homework 02 task 05
+[33m6273fcc[m HEAD@{65}: checkout: moving from hw_02_01 to hw_02_05
+[33m5cdbbe5[m HEAD@{66}: commit: Fix homework 02 task 02
+[33m9b52045[m HEAD@{67}: checkout: moving from hw_02_02 to hw_02_01
+[33m51703db[m HEAD@{68}: commit: Fix homework 02 task 02
+[33ma0bcaf0[m HEAD@{69}: reset: moving to master
+[33m1b35e16[m HEAD@{70}: checkout: moving from hw_01_04 to hw_02_02
+[33mc124fc8[m[33m ([m[1;32mhw_01_04[m[33m)[m HEAD@{71}: commit: Add homework 02 task 05 and test 05
+[33mfc14943[m HEAD@{72}: checkout: moving from hw_02_05 to hw_01_04
+[33m6273fcc[m HEAD@{73}: commit: Add homework 02 task 05 and test 05
+[33maeaef0a[m HEAD@{74}: checkout: moving from hw_01_02 to hw_02_05
+[33m66ca3fe[m[33m ([m[1;32mhw_01_02[m[33m)[m HEAD@{75}: commit: Fix homework 01 task 02
+[33mbd83cf5[m HEAD@{76}: checkout: moving from hw_02_05 to hw_01_02
+[33maeaef0a[m HEAD@{77}: commit: Add homework 02 task 05 and test 05
+[33m6f1b5a3[m[33m ([m[1;36mHEAD -> [m[1;32mhw_02_03[m[33m)[m HEAD@{78}: checkout: moving from hw_02_03 to hw_02_05
+[33m6f1b5a3[m[33m ([m[1;36mHEAD -> [m[1;32mhw_02_03[m[33m)[m HEAD@{79}: commit (merge): Merge remote-tracking branch 'origin/hw_02_03' into hw_02_03
+[33mdabe2bc[m HEAD@{80}: commit: Fix homework 02 task 03 and test 03
+[33ma0bcaf0[m HEAD@{81}: reset: moving to master
+[33m454f9bd[m HEAD@{82}: checkout: moving from hw_01_03 to hw_02_03
+[33m864ddec[m[33m ([m[1;32mhw_01_03[m[33m)[m HEAD@{83}: commit: Fix homework 01 task 03 and test 03
+[33mfcfff40[m HEAD@{84}: pull: Merge made by the 'recursive' strategy.
+[33mbc8bfd0[m HEAD@{85}: checkout: moving from hw_02_03 to hw_01_03
+[33m454f9bd[m HEAD@{86}: commit: Fix homework 02 task 03
+[33m5039e87[m HEAD@{87}: checkout: moving from hw_02_01 to hw_02_03
+[33m9b52045[m HEAD@{88}: commit: Fix homework 02 test 01
+[33m49f5e55[m HEAD@{89}: checkout: moving from hw_02_02 to hw_02_01
+[33m1b35e16[m HEAD@{90}: commit: Fix homework 02 test 02
+[33ma99388b[m HEAD@{91}: checkout: moving from hw_02_01 to hw_02_02
+[33m49f5e55[m HEAD@{92}: commit: Fix homework 02 task 01 and test 01
+[33m47b0fc6[m HEAD@{93}: checkout: moving from hw_01_02 to hw_02_01
+[33mbd83cf5[m HEAD@{94}: commit: Fix homework 01 task 02 and test 02
+[33m57a0902[m HEAD@{95}: checkout: moving from hw_02_01 to hw_01_02
+[33m47b0fc6[m HEAD@{96}: checkout: moving from hw_02_02 to hw_02_01
+[33ma99388b[m HEAD@{97}: merge origin/hw_02_02: Merge made by the 'recursive' strategy.
+[33m2f70dd4[m HEAD@{98}: commit: Add homework 02 task 02 and test 02
+[33ma0bcaf0[m HEAD@{99}: reset: moving to master
+[33mb0b4802[m HEAD@{100}: checkout: moving from hw_02_03 to hw_02_02
+[33m5039e87[m HEAD@{101}: commit: Add homework 02 task 03 and test 03
+[33ma0bcaf0[m HEAD@{102}: reset: moving to master
+[33mc1bac8a[m HEAD@{103}: checkout: moving from hw_01_03 to hw_02_03
+[33mbc8bfd0[m HEAD@{104}: checkout: moving from hw_01_05 to hw_01_03
+[33m355b6e8[m[33m ([m[1;31morigin/hw_01_05[m[33m)[m HEAD@{105}: commit: Fix k in homework 01 task 05 and add new cases in test 05
+[33mdea68a2[m HEAD@{106}: checkout: moving from hw_01_04 to hw_01_05
+[33mfc14943[m HEAD@{107}: merge master: Merge made by the 'recursive' strategy.
+[33m22f13c5[m[33m ([m[1;31morigin/hw_01_04[m[33m)[m HEAD@{108}: checkout: moving from hw_01_05 to hw_01_04
+[33mdea68a2[m HEAD@{109}: checkout: moving from hw_01_02 to hw_01_05
+[33m57a0902[m HEAD@{110}: commit: Fix homework 01 task 02 to get rid of 'res'
+[33m4198922[m HEAD@{111}: checkout: moving from hw_02_01 to hw_01_02
+[33m47b0fc6[m HEAD@{112}: commit: Add homework 02 task 01:
+[33ma12a676[m HEAD@{113}: commit: Add homework 02 task 01:
+[33ma0bcaf0[m HEAD@{114}: reset: moving to master
+[33me14c467[m HEAD@{115}: checkout: moving from hw_01_02 to hw_02_01
+[33m4198922[m HEAD@{116}: commit: Commit flake8
+[33m2642b60[m HEAD@{117}: commit: Fix return in homework 01 task 02
+[33mdf9943d[m HEAD@{118}: checkout: moving from hw_01_01 to hw_01_02
+[33m8348c0a[m[33m ([m[1;31morigin/hw_01_01[m[33m)[m HEAD@{119}: commit (merge): Merge remote-tracking branch 'origin/hw_01_01' into hw_01_01
+[33m8948819[m HEAD@{120}: commit: Fix homework 01 task 01 and test 01
+[33ma0bcaf0[m HEAD@{121}: reset: moving to master
+[33md26ae8e[m HEAD@{122}: merge master: Merge made by the 'recursive' strategy.
+[33m475709e[m HEAD@{123}: checkout: moving from hw_02_03 to hw_01_01
+[33mc1bac8a[m HEAD@{124}: commit: Add homework 02 task 03
+[33meeeec49[m HEAD@{125}: checkout: moving from hw_02_02 to hw_02_03
+[33mb0b4802[m HEAD@{126}: commit: Add task definition to homework 02 task 02
+[33meeeec49[m HEAD@{127}: checkout: moving from hw_02_03 to hw_02_02
+[33meeeec49[m HEAD@{128}: checkout: moving from hw_02_02 to hw_02_03
+[33meeeec49[m HEAD@{129}: checkout: moving from hw_02_03 to hw_02_02
+[33meeeec49[m HEAD@{130}: checkout: moving from hw_02_02 to hw_02_03
+[33meeeec49[m HEAD@{131}: commit: Add homework 02 task 02 and test 02
+[33ma0bcaf0[m HEAD@{132}: reset: moving to master
+[33ma0bcaf0[m HEAD@{133}: reset: moving to master
+[33ma0bcaf0[m HEAD@{134}: reset: moving to master
+[33me14c467[m HEAD@{135}: checkout: moving from hw_02_01 to hw_02_02
+[33me14c467[m HEAD@{136}: commit: Add homework 02 task 01
+[33m43c6be7[m HEAD@{137}: checkout: moving from master to hw_02_01
+[33ma0bcaf0[m HEAD@{138}: commit: Fix complexity in flake8
+[33m3f3e108[m HEAD@{139}: commit: Fix complexity in flake8
+[33mbc8bfd0[m HEAD@{140}: checkout: moving from hw_01_05 to master
+[33mdea68a2[m HEAD@{141}: commit: Some fix in homework 01 task 05 and test 05
+[33m050e74e[m HEAD@{142}: checkout: moving from hw_01_01 to hw_01_05
+[33m475709e[m HEAD@{143}: commit (merge): Merge remote-tracking branch 'origin/hw_01_01' into hw_01_01
+[33me9fa3a1[m HEAD@{144}: commit: REmove case with 0 from true cases and add it in False, Fix homework 01 task 01 and test 01
+[33mbc8bfd0[m HEAD@{145}: reset: moving to master
+[33m8b1fc5c[m HEAD@{146}: checkout: moving from hw_01_03 to hw_01_01
+[33mbc8bfd0[m HEAD@{147}: reset: moving to master
+[33m43c6be7[m HEAD@{148}: checkout: moving from hw_01_05 to hw_01_03
+[33m050e74e[m HEAD@{149}: commit (merge): Merge remote-tracking branch 'origin/hw_01_05' into hw_01_05
+[33m0bbc431[m HEAD@{150}: commit: In homework 01 task 05 change the loop while to for and delete case with empty list
+[33mbc8bfd0[m HEAD@{151}: reset: moving to master
+[33mec0324c[m HEAD@{152}: checkout: moving from hw_01_01 to hw_01_05
+[33m8b1fc5c[m HEAD@{153}: commit (merge): Merge remote-tracking branch 'origin/hw_01_01' into hw_01_01
+[33me41496a[m HEAD@{154}: commit: Add more cases in homework 01 test 01 (in test 01 I read that sqrt(0) == 0 and I think the function must be return True for this case
+[33m11ed41e[m HEAD@{155}: reset: moving to HEAD
+[33m11ed41e[m HEAD@{156}: commit: Add more cases in homework 01 test 01 (in test 01 I read that sqrt(0) == 0 and I think the function must be return True for this case
+[33mbc8bfd0[m HEAD@{157}: reset: moving to master
+[33mbc02109[m HEAD@{158}: checkout: moving from hw_01_05 to hw_01_01
+[33mec0324c[m HEAD@{159}: commit (merge): Merge remote-tracking branch 'origin/hw_01_05' into hw_01_05
+[33m5a9b4f5[m HEAD@{160}: commit: Fix homework 01 task 05 : implement this requirement sub-array with length less equal to "k" and add some more cases to test 05
+[33mbc8bfd0[m HEAD@{161}: reset: moving to master
+[33m330b663[m HEAD@{162}: commit: fix flake 8
+[33me09c586[m HEAD@{163}: checkout: moving from hw_01_02 to hw_01_05
+[33mdf9943d[m HEAD@{164}: commit: Fix homework 01 test 02
+[33m28f3eb2[m HEAD@{165}: checkout: moving from hw_01_05 to hw_01_02
+[33me09c586[m HEAD@{166}: commit: Fix homework 01 test 05
+[33m864b0e8[m HEAD@{167}: checkout: moving from hw_01_02 to hw_01_05
+[33m28f3eb2[m HEAD@{168}: commit: Add case with list of size 2
+[33m49f9365[m HEAD@{169}: checkout: moving from hw_01_01 to hw_01_02
+[33mbc02109[m HEAD@{170}: pull: Fast-forward
+[33md979474[m HEAD@{171}: checkout: moving from hw_01_02 to hw_01_01
+[33m49f9365[m HEAD@{172}: commit (merge): Merge branch 'hw_01_02' of github.com:/mukhaw/epam_python into hw_01_02
+[33m99d4195[m HEAD@{173}: commit: Fix cycle in homework 01 task 02 and add some new cases in test 02
+[33mbc8bfd0[m HEAD@{174}: reset: moving to master
+[33m71504a3[m HEAD@{175}: commit: Fix cycle in homework 01 task 02 and add some new cases in test 02
+[33mbc8bfd0[m HEAD@{176}: reset: moving to master
+[33me3a2825[m HEAD@{177}: commit: f
+[33mbc8bfd0[m HEAD@{178}: merge master: Fast-forward
+[33md979474[m HEAD@{179}: checkout: moving from master to hw_01_02
+[33mbc8bfd0[m HEAD@{180}: commit: Fix complexity
+[33md979474[m HEAD@{181}: checkout: moving from hw_01_02 to master
+[33md979474[m HEAD@{182}: reset: moving to master
+[33md979474[m HEAD@{183}: reset: moving to master
+[33md979474[m HEAD@{184}: reset: moving to master
+[33m661d0d1[m HEAD@{185}: commit: f
+[33m887accb[m HEAD@{186}: checkout: moving from hw_02_01 to hw_01_02
+[33m43c6be7[m HEAD@{187}: checkout: moving from hw_01_03 to hw_02_01
+[33m43c6be7[m HEAD@{188}: commit (merge): Merge remote-tracking branch 'origin/hw_01_03' into hw_01_03
+[33m3d61be2[m HEAD@{189}: commit: Fix homework 01 task 03 and test 03
+[33md979474[m HEAD@{190}: reset: moving to master
+[33m579f866[m HEAD@{191}: commit: Fix homework 01 task 03 and test 03
+[33m887accb[m HEAD@{192}: merge hw_01_02: Fast-forward
+[33md979474[m HEAD@{193}: reset: moving to master
+[33m6fb421e[m HEAD@{194}: commit: Fix homework 01 task 03 and test 03
+[33md979474[m HEAD@{195}: reset: moving to master
+[33m4b94df5[m HEAD@{196}: checkout: moving from hw_01_02 to hw_01_03
+[33m887accb[m HEAD@{197}: commit: Fix homework 01 task 02 and test 02
+[33md979474[m HEAD@{198}: reset: moving to master
+[33md979474[m HEAD@{199}: reset: moving to master
+[33m22712b6[m[33m ([m[1;31morigin/hw01_01[m[33m)[m HEAD@{200}: Branch: renamed refs/heads/hw01_01 to refs/heads/hw_01_02
+[33m22712b6[m[33m ([m[1;31morigin/hw01_01[m[33m)[m HEAD@{202}: checkout: moving from hw01_01 to hw01_01
+[33m22712b6[m[33m ([m[1;31morigin/hw01_01[m[33m)[m HEAD@{203}: checkout: moving from hw_01_01 to hw01_01
+[33md979474[m HEAD@{204}: reset: moving to master
+[33m5910f1a[m HEAD@{205}: commit: f
+[33mbc02109[m HEAD@{206}: commit: Add homework 01 task 01
+[33md979474[m HEAD@{207}: reset: moving to master
+[33mfbde51f[m HEAD@{208}: commit: "Add task 01 and test"
+[33m864b0e8[m HEAD@{209}: checkout: moving from hw_01_05 to hw_01_01
+[33m864b0e8[m HEAD@{210}: commit: Add homework 01 task 05
+[33md979474[m HEAD@{211}: reset: moving to master
+[33m22f13c5[m[33m ([m[1;31morigin/hw_01_04[m[33m)[m HEAD@{212}: merge hw_01_04: Fast-forward
+[33md979474[m HEAD@{213}: checkout: moving from master to hw_01_05
+[33md979474[m HEAD@{214}: checkout: moving from hw_01_04 to master
+[33m22f13c5[m[33m ([m[1;31morigin/hw_01_04[m[33m)[m HEAD@{215}: commit: Add homework 01 task 04
+[33md979474[m HEAD@{216}: reset: moving to master
+[33m4b94df5[m HEAD@{217}: checkout: moving from hw_01_04 to hw_01_04
+[33m4b94df5[m HEAD@{218}: checkout: moving from master to hw_01_04
+[33md979474[m HEAD@{219}: checkout: moving from hw_01_04 to master
+[33m4b94df5[m HEAD@{220}: checkout: moving from hw_01_03 to hw_01_04
+[33m4b94df5[m HEAD@{221}: commit: Fix task_01_03.py
+[33m00c34b1[m HEAD@{222}: commit: Replace task_01_03.py and test_01_03.py.
+[33md979474[m HEAD@{223}: checkout: moving from master to hw_01_03
+[33md979474[m HEAD@{224}: checkout: moving from master to master
+[33md979474[m HEAD@{225}: checkout: moving from master to master
+[33md979474[m HEAD@{226}: checkout: moving from hw01_01 to master
+[33m22712b6[m[33m ([m[1;31morigin/hw01_01[m[33m)[m HEAD@{227}: commit: Add homework 1 task 02
+[33md979474[m HEAD@{228}: reset: moving to master
+[33m658812e[m HEAD@{229}: commit (merge): Merge branch 'hm2' into hw01_01
+[33md979474[m HEAD@{230}: checkout: moving from master to hw01_01
+[33md979474[m HEAD@{231}: commit: Replace task02.py and test.py
+[33m46ccbd5[m[33m ([m[1;31morigin/hm1[m[33m, [m[1;32mhm1[m[33m)[m HEAD@{232}: checkout: moving from hm2 to master
+[33mecf429d[m[33m ([m[1;32mhm2[m[33m)[m HEAD@{233}: commit: Replace task02.py and test.py
+[33mcba3f83[m HEAD@{234}: commit: Replace task02.py and test.py
+[33mb30a76d[m[33m ([m[1;31morigin/task03[m[33m, [m[1;32mtask03[m[33m)[m HEAD@{235}: checkout: moving from hm to hm2
+[33m6c49afb[m[33m ([m[1;32mhm[m[33m)[m HEAD@{236}: checkout: moving from hm2 to hm
+[33mb30a76d[m[33m ([m[1;31morigin/task03[m[33m, [m[1;32mtask03[m[33m)[m HEAD@{237}: checkout: moving from task03 to hm2
+[33mb30a76d[m[33m ([m[1;31morigin/task03[m[33m, [m[1;32mtask03[m[33m)[m HEAD@{238}: commit: Add task03.py and test3.py
+[33m6c49afb[m[33m ([m[1;32mhm[m[33m)[m HEAD@{239}: checkout: moving from hm to task03
+[33m6c49afb[m[33m ([m[1;32mhm[m[33m)[m HEAD@{240}: commit: Add a task in task02.py
+[33m46ccbd5[m[33m ([m[1;31morigin/hm1[m[33m, [m[1;32mhm1[m[33m)[m HEAD@{241}: checkout: moving from hm to hm
+[33m46ccbd5[m[33m ([m[1;31morigin/hm1[m[33m, [m[1;32mhm1[m[33m)[m HEAD@{242}: checkout: moving from hm1 to hm
+[33m46ccbd5[m[33m ([m[1;31morigin/hm1[m[33m, [m[1;32mhm1[m[33m)[m HEAD@{243}: checkout: moving from master to hm1
+[33m46ccbd5[m[33m ([m[1;31morigin/hm1[m[33m, [m[1;32mhm1[m[33m)[m HEAD@{244}: commit: Add task02 and test
+[33m01829d6[m HEAD@{245}: commit (initial): Initial commit
