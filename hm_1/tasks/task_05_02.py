@@ -23,9 +23,9 @@ def print_result(func):
         print(result)
         return result
 
-    wrapper.__doc__ = "{} is new for the function {}".format(
-        str(func.__doc__), func.__name__
-    )
+    wrapper.__doc__ = func.__doc__
+    wrapper.__name__ = func.__name__
+    wrapper.__original_func = func
     return wrapper
 
 
